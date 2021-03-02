@@ -4,17 +4,27 @@
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
 
-    "defaultProfile": "{00000000-0000-0000-ba54-000000000002}",
-
+    "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+    "initialCols": 170,
+    "initialRows": 50,
     "multiLinePasteWarning": false,
     "largePasteWarning": false,
 
     "profiles": {
         "defaults": {
             "useAcrylic": true,
-            "acrylicOpacity": 0.65
+            "acrylicOpacity": 0.85,
+            // "background": "#061027"
+            "background": "#1f1e1f",
         },
         "list": [
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "fontSize": 15,
+                "source": "Windows.Terminal.Wsl"
+            },
             {
                 "guid": "{00000000-0000-0000-ba54-000000000002}",
                 //   "acrylicOpacity": 0.75,
@@ -32,13 +42,6 @@
                 "snapOnInput": true,
                 "startingDirectory": "%USERPROFILE%"
                 //   "useAcrylic": true
-            },
-            {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": false,
-                "name": "Ubuntu",
-                "fontSize": 15,
-                "source": "Windows.Terminal.Wsl"
             },
             {
                 // Make changes here to the powershell.exe profile
@@ -59,6 +62,12 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
@@ -72,6 +81,7 @@
         // { "command": "closePane", "keys": ["ctrl+w"] },
         { "command": "copy", "keys": ["ctrl+shift+c"] },
         { "command": "paste", "keys": ["ctrl+v"] },
+        // { "command": "tabSearch", "keys": ["ctrl+f"] },
         // { "command": "newTab", "keys": ["ctrl+t"] },
         { "command": "nextTab", "keys": ["ctrl+tab"] },
         {
